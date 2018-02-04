@@ -58,10 +58,23 @@ class Buffer {
   }
 
   loaded() {
-    // do something when sound is loaded
+    // Do something when all sounds are loaded
   }
 
   getSound(index) {
     return this.buffer[index];
   }
 }
+
+let context = new (window.AudioContext || window.webkitAudioContext)();
+let sounds = [
+  // piano notes url (G4, A4, C5, D5, E5, G5, A5, C6, D6, D#6, E6, G6, A6, C7, D7)
+];
+let buffer = new Buffer(context, sounds);
+
+buffer.getBuffer();
+
+// set all the custom data attributes on each key to represent each note
+// let index = parseInt(dataset.note, 10);
+let piano = new Piano(context, buffer.getSound(index));
+piano.play();
