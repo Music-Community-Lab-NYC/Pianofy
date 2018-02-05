@@ -1,3 +1,3 @@
 # Piano
 
-A digital piano built by Web Audio API
+A piano built by Web Audio API
