@@ -76,5 +76,5 @@ buffer.getBuffer();
 
 // set all the custom data attributes on each key to represent each note
 // let index = parseInt(dataset.note, 10);
-let piano = new Piano(context, buffer.getSound(index));
-piano.play();
+// let piano = new Piano(context, buffer.getSound(index));
+// piano.play();
