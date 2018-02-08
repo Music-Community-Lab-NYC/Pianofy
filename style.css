@@ -104,3 +104,43 @@ body {
   margin-bottom: 50px;
   font-weight: bold;
 }
+
+@media (max-width: 1200px) {
+  .up-note-group .up-note {
+    width: 25px;
+  }
+
+  .up-note-group .up-note div, .bottom-note div {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .up-note-group .up-note {
+    width: 20px;
+  }
+
+  .up-note-group .up-note div, .bottom-note div {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .up-note-group .up-note {
+    width: 15px;
+  }
+
+  .up-note-group .up-note div, .bottom-note div {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .up-note-group .up-note {
+    width: 10px;
+  }
+
+  .up-note-group .up-note div, .bottom-note div {
+    font-size: 8px;
+  }
+}
