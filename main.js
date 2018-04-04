@@ -66,6 +66,19 @@ class Buffer {
   }
 }
 
+let piano = null;
+
+function playPiano() {
+  let index = parseInt(this.dataset.note);
+
+  piano = new Piano(context, buffer.getSound(index));
+  piano.play();
+}
+
+function stopPiano() {
+  piano.stop();
+}
+
 let context = new (window.AudioContext || window.webkitAudioContext)();
 let sounds = [
   // piano notes url (G4, A4, C5, D5, E5, G5, A5, C6, D6, D#6, E6, G6, A6, C7, D7)
@@ -73,6 +86,13 @@ let sounds = [
 let buffer = new Buffer(context, sounds);
 
 buffer.getBuffer();
+
+let keys = document.querySelectorAll('#piano .bottom-note');
+
+keys.forEach(key => {
+  key.addEventListener('mouseenter', playPiano.bind(key));
+  key.addEventListener('mouseleave', stopPiano);
+});
 
 // set all the custom data attributes on each key to represent each note
 // let index = parseInt(dataset.note, 10);
