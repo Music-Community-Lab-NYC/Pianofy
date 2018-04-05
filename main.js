@@ -68,6 +68,11 @@ class Buffer {
 
 let piano = null;
 
+function cursor(event) {
+  finger.style.left = `${event.clientX}px`;
+  finger.style.top = `${event.clientY}px`;
+}
+
 function playPiano() {
   // set all the custom data attributes on each key to represent each note
   let index = parseInt(this.dataset.note, 10);
@@ -107,8 +112,11 @@ let buffer = new Buffer(context, sounds);
 
 buffer.getBuffer();
 
+let finger = document.querySelector('.finger');
 let bottomKeys = document.querySelectorAll('#piano .bottom-note');
 let upKeys = document.querySelectorAll('#piano .up-note');
+
+document.addEventListener('mousemove', cursor);
 
 keys(bottomKeys);
 keys(upKeys);
