@@ -35,7 +35,6 @@ body {
   border-radius: 2px;
   margin: 0px;
   overflow: hidden;
-  z-index: 1;
 }
 
 .bar {
@@ -55,6 +54,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  opacity: 0;
 }
 
 .up-note-group-1 {
