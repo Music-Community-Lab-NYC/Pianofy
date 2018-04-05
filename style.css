@@ -11,6 +11,18 @@ body {
   background-size: cover;
 }
 
+.finger {
+  position: absolute;
+  left: 35%;
+  top: 45%;
+  background: url('images/finger.png') no-repeat center center;
+  background-size: cover;
+  width: 37px;
+  height: 53px;
+  z-index: 1;
+  pointer-events: none;
+}
+
 #piano {
   position: fixed;
   right: 120px;
@@ -23,63 +35,55 @@ body {
   flex-wrap: nowrap;
 }
 
-.up-note-group {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-}
-
-.up-note-group .up-note-group-1 {
+.up-note-group-1 {
   position: absolute;
   top: 0;
   left: 4.5%;
   width: 11%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.up-note-group .up-note-group-2 {
+.up-note-group-2 {
   position: absolute;
   top: 0;
   left: 24.2%;
   width: 18%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.up-note-group .up-note-group-3 {
+.up-note-group-3 {
   position: absolute;
   top: 0;
   left: 51.1%;
   width: 11%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.up-note-group .up-note-group-4 {
+.up-note-group-4 {
   position: absolute;
   top: 0;
   left: 70.9%;
   width: 18%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.up-note-group .up-note {
+.up-note {
   width: 30px;
   height: 100%;
   color: rgba(255, 255, 255, 1);
@@ -106,41 +110,41 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .up-note-group .up-note {
+  .up-note {
     width: 25px;
   }
 
-  .up-note-group .up-note div, .bottom-note div {
+  .up-note div, .bottom-note div {
     font-size: 14px;
   }
 }
 
 @media (max-width: 992px) {
-  .up-note-group .up-note {
+  .up-note {
     width: 20px;
   }
 
-  .up-note-group .up-note div, .bottom-note div {
+  .up-note div, .bottom-note div {
     font-size: 12px;
   }
 }
 
 @media (max-width: 768px) {
-  .up-note-group .up-note {
+  .up-note {
     width: 15px;
   }
 
-  .up-note-group .up-note div, .bottom-note div {
+  .up-note div, .bottom-note div {
     font-size: 10px;
   }
 }
 
 @media (max-width: 576px) {
-  .up-note-group .up-note {
+  .up-note {
     width: 10px;
   }
 
-  .up-note-group .up-note div, .bottom-note div {
+  .up-note div, .bottom-note div {
     font-size: 8px;
   }
 }
