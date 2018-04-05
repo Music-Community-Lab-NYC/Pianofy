@@ -89,11 +89,11 @@ let sounds = [
   'https://play-piano.herokuapp.com/notes/G.mp3',
   'https://play-piano.herokuapp.com/notes/A.mp3',
   'https://play-piano.herokuapp.com/notes/B.mp3',
-  'https://play-piano.herokuapp.com/notes/C#.mp3',
-  'https://play-piano.herokuapp.com/notes/D#.mp3',
-  'https://play-piano.herokuapp.com/notes/F#.mp3',
-  'https://play-piano.herokuapp.com/notes/G#.mp3',
-  'https://play-piano.herokuapp.com/notes/A#.mp3'
+  'https://play-piano.herokuapp.com/notes/Db.mp3',
+  'https://play-piano.herokuapp.com/notes/Eb.mp3',
+  'https://play-piano.herokuapp.com/notes/Gb.mp3',
+  'https://play-piano.herokuapp.com/notes/Ab.mp3',
+  'https://play-piano.herokuapp.com/notes/Bb.mp3'
 ];
 let buffer = new Buffer(context, sounds);
 
