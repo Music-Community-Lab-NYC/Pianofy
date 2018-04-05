@@ -82,6 +82,13 @@ function stopPiano() {
 let context = new (window.AudioContext || window.webkitAudioContext)();
 let sounds = [
   // piano notes url (G4, A4, C5, D5, E5, G5, A5, C6, D6, D#6, E6, G6, A6, C7, D7)
+  'http://play-piano.herokuapp.com/notes/C.mp3',
+  'http://play-piano.herokuapp.com/notes/D.mp3',
+  'http://play-piano.herokuapp.com/notes/E.mp3',
+  'http://play-piano.herokuapp.com/notes/F.mp3',
+  'http://play-piano.herokuapp.com/notes/G.mp3',
+  'http://play-piano.herokuapp.com/notes/A.mp3',
+  'http://play-piano.herokuapp.com/notes/B.mp3'
 ];
 let buffer = new Buffer(context, sounds);
 
