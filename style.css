@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  background: url('music.jpg') no-repeat center center;
+  background: url('images/music.jpg') no-repeat center center;
   background-size: cover;
 }
 
