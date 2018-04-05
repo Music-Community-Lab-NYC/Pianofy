@@ -69,7 +69,8 @@ class Buffer {
 let piano = null;
 
 function playPiano() {
-  let index = parseInt(this.dataset.note);
+  // set all the custom data attributes on each key to represent each note
+  let index = parseInt(this.dataset.note, 10);
 
   piano = new Piano(context, buffer.getSound(index));
   piano.play();
@@ -88,7 +89,7 @@ function keys(keys) {
 
 let context = new (window.AudioContext || window.webkitAudioContext)();
 let sounds = [
-  // piano notes url (G4, A4, C5, D5, E5, G5, A5, C6, D6, D#6, E6, G6, A6, C7, D7)
+  // urls of piano notes (C, D, E, F, G, A, B, Db, Eb, Gb, Ab, Bb)
   'https://play-piano.herokuapp.com/notes/C.mp3',
   'https://play-piano.herokuapp.com/notes/D.mp3',
   'https://play-piano.herokuapp.com/notes/E.mp3',
@@ -111,8 +112,3 @@ let upKeys = document.querySelectorAll('#piano .up-note');
 
 keys(bottomKeys);
 keys(upKeys);
-
-// set all the custom data attributes on each key to represent each note
-// let index = parseInt(dataset.note, 10);
-// let piano = new Piano(context, buffer.getSound(index));
-// piano.play();
