@@ -43,7 +43,7 @@ class Buffer {
       thisBuffer.context.decodeAudioData(request.response, buffer => {
         thisBuffer.buffer[index] = buffer;
 
-        progress(thisBuffer.urls.length);
+        updateProgress(thisBuffer.urls.length);
 
         if (index === thisBuffer.urls.length - 1) {
           this.loaded();
@@ -68,12 +68,17 @@ class Buffer {
   }
 }
 
+let progress = document.querySelector('.progress');
 let bar = document.querySelector('.bar');
 let counter = 0;
 let piano = null;
 
-function progress(size) {
-  bar.style.width = `${++counter / size * 100}%`;
+function updateProgress(size) {
+  let value = `${++counter / size * 100}%`;
+
+  progress.setAttribute('value', value);
+
+  bar.style.width = value;
 }
 
 function cursor(event) {
