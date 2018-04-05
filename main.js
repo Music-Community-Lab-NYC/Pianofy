@@ -61,6 +61,8 @@ class Buffer {
 
   loaded() {
     // Do something when all sounds are loaded
+    document.querySelector('.progress').style.opacity = 0;
+    document.querySelector('#piano').style.opacity = 1;
   }
 
   getSound(index) {
