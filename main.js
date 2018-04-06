@@ -4,7 +4,7 @@
     $(function() {
       $('#piano').animate({
         bottom: '+=60px'
-      });
+      }, 600);
     });
 
     class Piano {
