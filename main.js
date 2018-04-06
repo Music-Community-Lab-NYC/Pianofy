@@ -110,18 +110,18 @@ function keys(keys) {
 let context = new (window.AudioContext || window.webkitAudioContext)();
 let sounds = [
   // urls of piano notes (C, D, E, F, G, A, B, Db, Eb, Gb, Ab, Bb)
-  'https://play-piano.herokuapp.com/notes/C.mp3',
-  'https://play-piano.herokuapp.com/notes/D.mp3',
-  'https://play-piano.herokuapp.com/notes/E.mp3',
-  'https://play-piano.herokuapp.com/notes/F.mp3',
-  'https://play-piano.herokuapp.com/notes/G.mp3',
-  'https://play-piano.herokuapp.com/notes/A.mp3',
-  'https://play-piano.herokuapp.com/notes/B.mp3',
-  'https://play-piano.herokuapp.com/notes/Db.mp3',
-  'https://play-piano.herokuapp.com/notes/Eb.mp3',
-  'https://play-piano.herokuapp.com/notes/Gb.mp3',
-  'https://play-piano.herokuapp.com/notes/Ab.mp3',
-  'https://play-piano.herokuapp.com/notes/Bb.mp3'
+  'https://play-pianofy.herokuapp.com/notes/C.mp3',
+  'https://play-pianofy.herokuapp.com/notes/D.mp3',
+  'https://play-pianofy.herokuapp.com/notes/E.mp3',
+  'https://play-pianofy.herokuapp.com/notes/F.mp3',
+  'https://play-pianofy.herokuapp.com/notes/G.mp3',
+  'https://play-pianofy.herokuapp.com/notes/A.mp3',
+  'https://play-pianofy.herokuapp.com/notes/B.mp3',
+  'https://play-pianofy.herokuapp.com/notes/Db.mp3',
+  'https://play-pianofy.herokuapp.com/notes/Eb.mp3',
+  'https://play-pianofy.herokuapp.com/notes/Gb.mp3',
+  'https://play-pianofy.herokuapp.com/notes/Ab.mp3',
+  'https://play-pianofy.herokuapp.com/notes/Bb.mp3'
 ];
 let buffer = new Buffer(context, sounds);
 
