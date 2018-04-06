@@ -24,6 +24,17 @@ body {
   pointer-events: none;
 }
 
+h1 {
+  position: fixed;
+  top: 32%;
+  right: 14%;
+  margin: 0;
+  padding: 0;
+  color: #1DB954;
+  font-size: 64px;
+  text-align: center;
+}
+
 .progress {
   position: fixed;
   right: 120px;
@@ -132,6 +143,11 @@ body {
 }
 
 @media (max-width: 1200px) {
+  h1 {
+    font-size: 56px;
+    top: 33%;
+  }
+
   .up-note {
     width: 25px;
   }
@@ -145,6 +161,11 @@ body {
   .finger {
     width: 21px;
     height: 31px;
+  }
+
+  h1 {
+    font-size: 48px;
+    top: 34%;
   }
 
   .up-note {
@@ -162,6 +183,11 @@ body {
     height: 23px;
   }
 
+  h1 {
+    font-size: 40px;
+    top: 35%;
+  }
+
   .up-note {
     width: 15px;
   }
@@ -175,6 +201,11 @@ body {
   .finger {
     width: 11px;
     height: 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+    top: 36%;
   }
 
   .up-note {
