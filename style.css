@@ -58,7 +58,7 @@ h1 {
 #piano {
   position: fixed;
   right: 120px;
-  bottom: 60px;
+  bottom: 0;
   background: rgba(255, 255, 255, 1);
   width: 50%;
   height: 40%;
