@@ -65,7 +65,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .up-note-group-1 {
@@ -143,6 +143,11 @@ h1 {
 }
 
 @media (max-width: 1200px) {
+  .finger {
+    width: 28px;
+    height: 38px;
+  }
+
   h1 {
     font-size: 56px;
     top: 33%;
