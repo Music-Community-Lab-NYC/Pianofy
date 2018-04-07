@@ -109,10 +109,31 @@
       piano.stop();
     }
 
+    function showRipple() {
+      rippleLarge.style.animationPlayState = 'running';
+      rippleSmall.style.animationPlayState = 'running';
+      rippleLarge.classList.remove('hidden');
+      rippleSmall.classList.remove('hidden');
+    }
+
+    function hideRipple() {
+      rippleLarge.style.animationPlayState = 'paused';
+      rippleSmall.style.animationPlayState = 'paused';
+      rippleLarge.classList.add('hidden');
+      rippleSmall.classList.add('hidden');
+    }
+
     function keys(keys) {
       keys.forEach(key => {
-        key.addEventListener('mouseenter', playPiano.bind(key));
-        key.addEventListener('mouseleave', stopPiano);
+        key.addEventListener('mouseenter', () => {
+          playPiano.bind(key)();
+          showRipple();
+          setTimeout(hideRipple, 300);
+        });
+        key.addEventListener('mouseleave', () => {
+          stopPiano();
+          hideRipple();
+        });
       });
     }
 
@@ -137,6 +158,8 @@
     buffer.getBuffer();
 
     let finger = document.querySelector('.finger');
+    let rippleLarge = document.querySelector('.ripple-large');
+    let rippleSmall = document.querySelector('.ripple-small');
     let bottomKeys = document.querySelectorAll('#piano .bottom-note');
     let upKeys = document.querySelectorAll('#piano .up-note');
 
