@@ -36,10 +36,6 @@ body {
   animation-play-state: paused;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .ripple-large {
   width: 34px;
   height: 34px;
@@ -57,6 +53,10 @@ body {
   z-index: 2;
   animation-duration: 0.2s;
   animation-delay: 0.1s;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 h1 {
@@ -177,6 +177,15 @@ h1 {
   font-weight: bold;
 }
 
+@keyframes ripple {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
 @media (max-width: 1200px) {
   .finger {
     width: 28px;
@@ -185,7 +194,7 @@ h1 {
 
   h1 {
     font-size: 56px;
-    top: 33%;
+    top: 1%;
   }
 
   .up-note {
@@ -194,6 +203,20 @@ h1 {
 
   .up-note div, .bottom-note div {
     font-size: 14px;
+  }
+
+  .ripple-large {
+    width: 26px;
+    height: 26px;
+    left: -2px;
+    top: -6px;
+  }
+
+  .ripple-small {
+    width: 22px;
+    height: 22px;
+    left: -0.5px;
+    top: -30px;
   }
 }
 
@@ -205,7 +228,7 @@ h1 {
 
   h1 {
     font-size: 48px;
-    top: 34%;
+    top: 2%;
   }
 
   .up-note {
@@ -214,6 +237,20 @@ h1 {
 
   .up-note div, .bottom-note div {
     font-size: 12px;
+  }
+
+  .ripple-large {
+    width: 22px;
+    height: 22px;
+    left: -3px;
+    top: -5px;
+  }
+
+  .ripple-small {
+    width: 16px;
+    height: 16px;
+    left: -0.5px;
+    top: -24px;
   }
 }
 
@@ -225,7 +262,7 @@ h1 {
 
   h1 {
     font-size: 40px;
-    top: 35%;
+    top: 3%;
   }
 
   .up-note {
@@ -234,6 +271,20 @@ h1 {
 
   .up-note div, .bottom-note div {
     font-size: 10px;
+  }
+
+  .ripple-large {
+    width: 18px;
+    height: 18px;
+    left: -3px;
+    top: -5px;
+  }
+
+  .ripple-small {
+    width: 12px;
+    height: 12px;
+    left: -0.5px;
+    top: -20px;
   }
 }
 
@@ -245,7 +296,7 @@ h1 {
 
   h1 {
     font-size: 32px;
-    top: 36%;
+    top: 4%;
   }
 
   .up-note {
@@ -255,13 +306,18 @@ h1 {
   .up-note div, .bottom-note div {
     font-size: 8px;
   }
-}
 
-@keyframes ripple {
-  from {
-    transform: scale(1);
+  .ripple-large {
+    width: 14px;
+    height: 14px;
+    left: -3px;
+    top: -6px;
   }
-  to {
-    transform: scale(1.5);
+
+  .ripple-small {
+    width: 10px;
+    height: 10px;
+    left: -1.5px;
+    top: -18px;
   }
 }
