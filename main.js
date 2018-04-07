@@ -2,9 +2,13 @@
   func(window.jQuery, window, document)
 }(function($, window, document) {
     $(function() {
-      $('#piano').animate({
-        bottom: '+=60px'
-      }, 600);
+      $('h1').animate({
+        top: '+=32%'
+      }, 600, 'easeOutBounce', () => {
+        $('#piano').animate({
+          bottom: '+=60px'
+        }, 600);
+      });
     });
 
     class Piano {
