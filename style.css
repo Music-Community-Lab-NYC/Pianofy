@@ -20,8 +20,31 @@ body {
   background-size: cover;
   width: 30px;
   height: 47px;
-  z-index: 1;
+  z-index: 3;
   pointer-events: none;
+}
+
+.ripple-large, .ripple-small {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgba(33, 150, 243, 0.25);
+  opacity: 1;
+}
+
+.ripple-large {
+  width: 34px;
+  height: 34px;
+  left: -6px;
+  top: -6px;
+  z-index: 1;
+}
+
+.ripple-small {
+  width: 28px;
+  height: 28px;
+  left: -3px;
+  top: -37px;
+  z-index: 2;
 }
 
 h1 {
