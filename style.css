@@ -94,7 +94,6 @@ h1 {
   position: fixed;
   right: 120px;
   bottom: 0;
-  background: rgba(255, 255, 255, 1);
   width: 50%;
   height: 40%;
   display: flex;
@@ -103,82 +102,80 @@ h1 {
   opacity: 0;
 }
 
-.up-note-group-1 {
+.up-note-group-1, .up-note-group-2, .up-note-group-3, .up-note-group-4 {
   position: absolute;
   top: 0;
-  left: 4.5%;
-  width: 11%;
   height: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  z-index: 1;
+}
+
+.up-note-group-1, .up-note-group-3 {
+  width: 11%;
+}
+
+.up-note-group-2, .up-note-group-4 {
+  width: 18%;
+}
+
+.up-note-group-1 {
+  left: 4.5%;
 }
 
 .up-note-group-2 {
-  position: absolute;
-  top: 0;
   left: 24.2%;
-  width: 18%;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
 .up-note-group-3 {
-  position: absolute;
-  top: 0;
   left: 51.1%;
-  width: 11%;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
 .up-note-group-4 {
-  position: absolute;
-  top: 0;
   left: 70.9%;
-  width: 18%;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
-.up-note:hover, .bottom-note:hover {
+.up-note, .bottom-note {
+  display: table;
+  height: 100%;
+  perspective: 200px;
+  user-select: none;
+}
+
+.up-note div, .bottom-note div {
+  display: table-cell;
+  text-align: center;
+  transform-origin: top center;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
+}
+
+.up-note:hover div, .bottom-note:hover div {
   transform: rotateX(-5deg);
 }
 
 .up-note {
   width: 30px;
-  height: 100%;
   color: rgba(255, 255, 255, 1);
-  background: rgba(0, 0, 0, 1);
   line-height: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.up-note div {
+  background: rgba(0, 0, 0, 1);
+  vertical-align: middle;
 }
 
 .bottom-note {
-  height: 100%;
   flex: 1 1 auto;
-  border: 1px solid rgba(0, 0, 0, 1);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .bottom-note div {
-  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 1);
+  vertical-align: bottom;
+  padding-bottom: 50px;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 1);
 }
 
 @keyframes ripple {
