@@ -166,10 +166,37 @@
     let rippleSmall = document.querySelector('.ripple-small');
     let bottomKeys = document.querySelectorAll('#piano .bottom-note');
     let upKeys = document.querySelectorAll('#piano .up-note');
+    let audio = document.querySelector('audio');
+    let play = document.querySelector('.play');
+    let rewind = document.querySelector('.rewind');
 
     document.addEventListener('mousemove', cursor);
 
     keys(bottomKeys);
     keys(upKeys);
+
+    audio.addEventListener('ended', pauseTrack);
+    play.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playTrack();
+      } else {
+        audio.pause();
+        pauseTrack();
+      }
+    });
+    rewind.addEventListener('click', () => {
+      audio.currentTime = 0;
+    });
+
+    function playTrack() {
+      play.querySelector('.pause-icon').style.display = 'block';
+      play.querySelector('.play-icon').style.display = 'none';
+    }
+
+    function pauseTrack() {
+      play.querySelector('.pause-icon').style.display = 'none';
+      play.querySelector('.play-icon').style.display = 'block';
+    }
   }
 ));
