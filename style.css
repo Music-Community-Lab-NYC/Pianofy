@@ -35,13 +35,11 @@ nav {
 .rewind {
   margin-left: 28px;
   height: 16px;
-  cursor: pointer;
 }
 
 .play {
   margin-left: 24px;
   height: 24px;
-  cursor: pointer;
 }
 
 .play-icon:hover path, .rewind-icon:hover path, .pause-icon:hover rect {
@@ -56,6 +54,7 @@ nav {
   font-size: 24px;
   color: #A8B5C2;
   margin-left: 18px;
+  cursor: none;
 }
 
 .social a:hover {
