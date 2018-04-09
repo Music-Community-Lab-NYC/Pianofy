@@ -12,6 +12,56 @@ body {
   background-size: cover;
 }
 
+nav {
+  background-color: #221C44;
+  height: 52px;
+  font-family: 'Roboto', sans-serif;
+  color: #969DA2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 17px;
+  position: relative;
+  z-index: 2;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.rewind {
+  margin-left: 28px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.play {
+  margin-left: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.play-icon:hover path, .rewind-icon:hover path, .pause-icon:hover rect {
+  fill: #566574;
+}
+
+.pause-icon {
+  display: none;
+}
+
+.social a {
+  font-size: 24px;
+  color: #A8B5C2;
+  margin-left: 18px;
+}
+
+.social a:hover {
+  color: #566574;
+}
+
 .finger {
   position: absolute;
   left: 35%;
