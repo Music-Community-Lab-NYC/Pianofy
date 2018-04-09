@@ -6,10 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pianofy</title>
   <link rel="icon" type="image/png" href="images/piano.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <div class="controls">
+      Reflection Of Myself (Myself In Side Mirror) - Original
+      <a class="rewind">
+        <svg width="26" height="16" viewBox="160 18 26 16" xmlns="http://www.w3.org/2000/svg" class="rewind-icon">
+          <path d="M173.3 26.143l12 6.857V18.778l-12 6.857v-6.857l-12.444 7.11L173.3 33v-6.857z" fill="#A8B5C3" fill-rule="evenodd" />
+        </svg>
+      </a>
+      <a class="play">
+        <svg width="21" height="24" viewBox="210 14 21 24" xmlns="http://www.w3.org/2000/svg" class="play-icon">
+          <path fill="#A8B5C2" fill-rule="evenodd" d="M230.677 25.815L210 37.63V14" />
+        </svg>
+        <svg width="21px" height="24px" viewBox="210 14 21 24" xmlns="http://www.w3.org/2000/svg" class="pause-icon">
+          <rect id="pause-1" fill="#A8B5C2" fill-rule="evenodd" x="210" y="14" width="7" height="24"></rect>
+          <rect id="pause-2"  fill="#A8B5C2" fill-rule="evenodd" x="224" y="14" width="7" height="24"></rect>
+        </svg>
+      </a>
+    </div>
+    <div class="social">
+      <a href="" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+
   <div class="finger">
     <div class="ripple-large hidden"></div>
     <div class="ripple-small hidden"></div>
@@ -60,6 +85,10 @@
     <div class="bottom-note" data-note="6"><div>B</div></div>
     <div class="bottom-note" data-note="0"><div>C</div></div>
   </div>
+
+  <audio>
+    <source src="http://play-pianofy.herokuapp.com/music/Reflection%20Of%20Myself%20(Myself%20In%20Side%20Mirror).mp3" type="audio/mpeg">
+  </audio>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="main.js"></script>
