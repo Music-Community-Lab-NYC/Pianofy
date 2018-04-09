@@ -1,6 +1,6 @@
 # Pianofy
 
-A virtual piano on the web to increase access to musical instrument for people anywhere anytime
+A web piano that is developed and designed to increase access to musical instrument for people anywhere anytime
 
 It is built in Web Audio API, Web APIs, CSS, HTML and jQuery.
 
