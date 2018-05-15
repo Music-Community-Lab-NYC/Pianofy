@@ -130,9 +130,11 @@
     function keys(keys) {
       keys.forEach(key => {
         key.addEventListener('mouseenter', () => {
-          playPiano.bind(key)();
-          showRipple();
-          setTimeout(hideRipple, 300);
+          context.resume().then(() => {
+            playPiano.bind(key)();
+            showRipple();
+            setTimeout(hideRipple, 300);
+          });
         });
         key.addEventListener('mouseleave', () => {
           stopPiano();
