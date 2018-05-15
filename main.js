@@ -9,8 +9,6 @@
           bottom: '+=60px'
         }, 600);
       });
-
-      let context = new (window.AudioContext || window.webkitAudioContext)();
     });
 
     class Piano {
