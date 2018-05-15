@@ -215,10 +215,6 @@ h1 {
   vertical-align: middle;
 }
 
-.up-note div span {
-  vertical-align: super;
-}
-
 .bottom-note {
   flex: 1 1 auto;
 }
