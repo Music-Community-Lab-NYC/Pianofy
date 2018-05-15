@@ -9,6 +9,8 @@
           bottom: '+=60px'
         }, 600);
       });
+
+      let context = new (window.AudioContext || window.webkitAudioContext)();
     });
 
     class Piano {
@@ -130,11 +132,11 @@
     function keys(keys) {
       keys.forEach(key => {
         key.addEventListener('mouseenter', () => {
-          let context = new (window.AudioContext || window.webkitAudioContext)();
-
-          playPiano.bind(key)();
-          showRipple();
-          setTimeout(hideRipple, 300);
+          context.resume().then(() => {
+            playPiano.bind(key)();
+            showRipple();
+            setTimeout(hideRipple, 300);
+          });
         });
         key.addEventListener('mouseleave', () => {
           stopPiano();
