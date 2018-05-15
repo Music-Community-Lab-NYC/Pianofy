@@ -141,6 +141,13 @@
       });
     }
 
+    function resumeContext() {
+      context.resume().then(() => {
+        keys(bottomKeys);
+        keys(upKeys);
+      });
+    }
+
     let context = new (window.AudioContext || window.webkitAudioContext)();
     let sounds = [
       // urls of piano notes (C, D, E, F, G, A, B, Db, Eb, Gb, Ab, Bb)
@@ -171,9 +178,7 @@
     let rewind = document.querySelector('.rewind');
 
     document.addEventListener('mousemove', cursor);
-
-    keys(bottomKeys);
-    keys(upKeys);
+    document.addEventListener('click', resumeContext);
 
     audio.addEventListener('ended', pauseTrack);
     play.addEventListener('click', () => {
