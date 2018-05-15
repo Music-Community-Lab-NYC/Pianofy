@@ -132,11 +132,9 @@
     function keys(keys) {
       keys.forEach(key => {
         key.addEventListener('mouseenter', () => {
-          context.resume().then(() => {
-            playPiano.bind(key)();
-            showRipple();
-            setTimeout(hideRipple, 300);
-          });
+          playPiano.bind(key)();
+          showRipple();
+          setTimeout(hideRipple, 300);
         });
         key.addEventListener('mouseleave', () => {
           stopPiano();
@@ -145,6 +143,7 @@
       });
     }
 
+    let context = new (window.AudioContext || window.webkitAudioContext)();
     let sounds = [
       // urls of piano notes (C, D, E, F, G, A, B, Db, Eb, Gb, Ab, Bb)
       'https://play-pianofy.herokuapp.com/notes/C.mp3',
