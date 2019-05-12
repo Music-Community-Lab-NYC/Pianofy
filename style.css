@@ -17,6 +17,7 @@ nav {
   height: 52px;
   font-family: 'Roboto', sans-serif;
   color: #969DA2;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,6 +29,7 @@ nav {
 }
 
 .controls {
+  display: -webkit-flex;
   display: flex;
   align-items: center;
 }
@@ -145,8 +147,11 @@ h1 {
   bottom: 0;
   width: 50%;
   height: 40%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   opacity: 0;
 }
@@ -155,8 +160,11 @@ h1 {
   position: absolute;
   top: 0;
   height: 60%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   justify-content: space-between;
   z-index: 1;
@@ -216,6 +224,7 @@ h1 {
 }
 
 .bottom-note {
+  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
