@@ -17,6 +17,7 @@ nav {
   height: 52px;
   font-family: 'Roboto', sans-serif;
   color: #969DA2;
+  display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   align-items: center;
@@ -29,6 +30,7 @@ nav {
 }
 
 .controls {
+  display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   align-items: center;
@@ -147,6 +149,7 @@ h1 {
   bottom: 0;
   width: 50%;
   height: 40%;
+  display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -160,6 +163,7 @@ h1 {
   position: absolute;
   top: 0;
   height: 60%;
+  display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
